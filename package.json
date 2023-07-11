@@ -1,0 +1,19 @@
+{
+  "name": "myits-siakad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^20.8.0",
+    "puppeteer-core": "^20.8.0",
+    "querystring": "^0.2.1"
+  },
+  "type": "module"
+}
