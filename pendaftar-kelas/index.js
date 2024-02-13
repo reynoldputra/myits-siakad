@@ -56,7 +56,7 @@ const scrap = async () => {
       },
     };
     await axios(config)
-      .then(async function (response) {
+      .then(async function(response) {
         const markup = response.data;
         const $ = cheerio.load(markup);
         const table1 = $(".AlternateBG");
@@ -71,13 +71,13 @@ const scrap = async () => {
           notifDisbale = false;
         }
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.log(error);
       });
     sleep(500);
   }
   console.log(notifDisbale)
-  const token = "Iwua4nwAOKIAzbV345XaPE22zRoENbA9HuhLlL9poIj";
+  const token = process.env.TOKEN;
   const lineurl = "https://notify-api.line.me/api/notify";
   const message = res;
 

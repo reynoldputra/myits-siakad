@@ -2,6 +2,7 @@ import pptr from "puppeteer-core";
 import * as c from "cheerio";
 import * as querystring from "querystring";
 import { exit } from "process";
+import process from "process";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -69,7 +70,7 @@ while (true) {
   let notifDisbale = true;
   console.log(count);
   if (count > prevCount) {
-    if(!first) {
+    if (!first) {
       notifDisbale = false;
     }
     prevCount = count;
@@ -78,7 +79,7 @@ while (true) {
 
   console.log(notifDisbale);
   console.log(res);
-  const token = "Iwua4nwAOKIAzbV345XaPE22zRoENbA9HuhLlL9poIj";
+  const token = process.env.TOKEN;
   const url = "https://notify-api.line.me/api/notify";
   const message = res;
 
